@@ -31,7 +31,6 @@
             </receiver>
         </config-file>
         <framework src="com.squareup.okhttp:okhttp:2.5.0" />
-        <framework src="com.squareup.okhttp:okhttp:2.5.0" />
         <source-file src="src/android/Sharedpreferences.java" target-dir="src/in/edelworks/sharedpreferences" />
         <source-file src="src/android/pro/devapp/notifi/notification/Alarm.java" target-dir="src/pro/devapp/notifi/notification" />
         <source-file src="src/android/pro/devapp/notifi/notification/AutoStart.java" target-dir="src/pro/devapp/notifi/notification" />

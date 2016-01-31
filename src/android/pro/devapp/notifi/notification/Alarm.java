@@ -25,7 +25,7 @@ public class Alarm extends BroadcastReceiver {
             // Выбираем таблетки по которм нужно отправить уведомления
             Notification notification = new Notification(context);
             String title = context.getResources().getString(R.string.app_name);
-            notification.startNotification(title, "test");
+            notification.startNotification(title, login);
         }
     }
 
