@@ -1,13 +1,14 @@
 package in.edelworks.sharedpreferences;
 
-import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.CallbackContext;
+import android.content.Context;
+import android.content.SharedPreferences;
 
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import android.content.Context;
-import android.content.SharedPreferences;
+import pro.devapp.notifi.notification.PreferenceHelper;
 
 public class Sharedpreferences extends CordovaPlugin {
 	public static final String GET_SHARED_PREFERENCES = "getSharedPreferences";
@@ -63,14 +64,15 @@ public class Sharedpreferences extends CordovaPlugin {
 		//Put a Sting into the Shared Preferences File
 		//params key and value String type
 		}else if(PUT_STRING.equals(action)){
-			editor = SharedPref.edit();
-			try{
-				editor.putString(args.getString(0), args.getString(1));
-				editor.commit();
-			}catch (Exception e){
-				callbackContext.error("Error editing Key " + args.getString(0) + " with value " + args.getString(1) + e.getMessage());
-				return false;
-			}
+			PreferenceHelper.save(cordova.getActivity().getApplicationContext(), args.getString(0), args.getString(1));
+//			editor = SharedPref.edit();
+//			try{
+//				editor.putString(args.getString(0), args.getString(1));
+//				editor.commit();
+//			}catch (Exception e){
+//				callbackContext.error("Error editing Key " + args.getString(0) + " with value " + args.getString(1) + e.getMessage());
+//				return false;
+//			}
 			callbackContext.success("Added Value " + args.getString(1) + " to Preferences key " + args.getString(0));
 			return true;		
 		}else if(GET_STRING.equals(action)){									
