@@ -19,6 +19,18 @@
                 <param name="android-package" value="in.edelworks.sharedpreferences.Sharedpreferences"/>
             </feature>
         </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <receiver android:name=".notification.NotificationPublisher" />
+            <receiver
+                    android:name=".notification.Alarm"
+                    android:process=":remote" />
+            <receiver android:name=".notification.AutoStart" >
+                <intent-filter>
+                    <action android:name="android.intent.action.BOOT_COMPLETED" />
+                </intent-filter>
+            </receiver>
+        </config-file>
+        <framework src="com.squareup.okhttp:okhttp:2.5.0" />
         <source-file src="src/android/Sharedpreferences.java" target-dir="src/in/edelworks/sharedpreferences" />
     </platform>
 </plugin>
