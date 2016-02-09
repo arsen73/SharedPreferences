@@ -34,6 +34,7 @@
         <source-file src="src/android/Sharedpreferences.java" target-dir="src/in/edelworks/sharedpreferences" />
         <source-file src="src/android/pro/devapp/notifi/notification/Alarm.java" target-dir="src/pro/devapp/notifi/notification" />
         <source-file src="src/android/pro/devapp/notifi/notification/AutoStart.java" target-dir="src/pro/devapp/notifi/notification" />
+        <source-file src="src/android/pro/devapp/notifi/notification/PreferenceHelper.java" target-dir="src/pro/devapp/notifi/notification" />
         <source-file src="src/android/pro/devapp/notifi/notification/Notification.java" target-dir="src/pro/devapp/notifi/notification" />
         <source-file src="src/android/pro/devapp/notifi/notification/NotificationPublisher.java" target-dir="src/pro/devapp/notifi/notification" />
     </platform>
